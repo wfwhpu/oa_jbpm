@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<include file="common.xml"></include>
+	<package name="org" namespace="/system" extends="common">
+		<action name="*" class="{1}Action">
+			<result name="index">/org/index.jsp</result>
+			<result name="add_input">/org/{1}_add_input.jsp</result>
+			<result name="update_input">/org/{1}_update_input.jsp</result>
+			<result name="company_input">/org/company_input.jsp</result>
+			<result name="person_list">/org/person_list.jsp</result>
+			<result name="add_success">/org/add_success.jsp</result>
+			<result name="update_success">/org/update_success.jsp</result>
+			<result name="del_success">/org/del_success.jsp</result>
+		</action>
+		<action name="user" class="userAction">
+			<result name="index">/user/index.jsp</result>
+			<result name="add_input">/user/add_input.jsp</result>
+			<result name="update_input">/user/update_input.jsp</result>
+			<result name="add_success">/user/add_success.jsp</result>
+			<result name="update_success">/user/update_success.jsp</result>
+		</action>
+		<action name="role" class="roleAction">
+			<result name="index">/role/index.jsp</result>
+			<result name="add_input">/role/add_input.jsp</result>
+			<result name="update_input">/role/update_input.jsp</result>
+			<result name="add_success">/role/add_success.jsp</result>
+			<result name="update_success">/role/update_success.jsp</result>
+		</action>
+		<action name="menu" class="menuAction">
+			<result name="index">/menu/index.jsp</result>
+			<result name="add_input">/menu/add_input.jsp</result>
+			<result name="update_input">/menu/update_input.jsp</result>
+			<result name="add_success">/menu/add_success.jsp</result>
+			<result name="update_success">/menu/update_success.jsp</result>
+			<result name="del_success">/menu/del_success.jsp</result>
+		</action>
+		<action name="resource" class="resourceAction">
+			<result name="index">/resource/index.jsp</result>
+			<result name="add_input">/resource/add_input.jsp</result>
+			<result name="update_input">/resource/update_input.jsp</result>
+			<result name="oper_input">/resource/oper_input.jsp</result>
+			<result name="add_success">/resource/add_success.jsp</result>
+			<result name="update_success">/resource/update_success.jsp</result>
+			<result name="del_success">/resource/del_success.jsp</result>
+		</action>
+		<action name="acl" class="aclAction">
+			<result name="role_auth_index">/acl/role_auth_index.jsp</result>
+			<result name="user_auth_index">/acl/user_auth_index.jsp</result>
+			<result name="party_auth_index">/acl/party_auth_index.jsp</result>
+			<result name="all_menu_resource">/acl/all_menu_resource.jsp</result>
+			<result name="all_action_resource">/acl/all_action_resource.jsp</result>
+		</action>
+		<action name="process" class="processAction">
+			<result name="list">/process/process_list.jsp</result>
+		
+		</action>
+		<action name="leave" class="leaveAction">
+			<result name="list">/leave/me_leave.jsp</result>
+			<result name="add_input">/leave/leave_add.jsp</result>
+			<result name="add_success">/process/leave_add_success.jsp</result>
+			
+		
+		</action>
+		<action name="login" class="loginAction">
+			<interceptor-ref name="oa-basic-stack"/>
+			<result name="back_index" type="redirect">/main.jsp</result>
+		</action>
+		<action name="index" class="indexAction">
+		</action>
+	</package>
+</struts>
