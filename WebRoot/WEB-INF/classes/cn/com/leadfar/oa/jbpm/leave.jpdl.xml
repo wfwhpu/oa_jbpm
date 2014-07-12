@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<process name="leave" key="LEAVE" xmlns="http://jbpm.org/4.4/jpdl">
+   <start name="start1" g="257,27,48,48">
+      <transition name="to 张三审批" to="张三审批" g="-69,-22"/>
+   </start>
+   
+   <task name="张三审批" g="236,121,92,52" assignee="张三">
+      <transition name="to 李四审批" to="李四审批" g="-69,-22"/>
+   </task>
+   <task name="李四审批" g="241,222,92,52" assignee="李四审批">
+      <transition name="to end1" to="end1" g="-50,-22"/>
+   </task>
+   <end name="end1" g="268,320,48,48"/>
+</process>

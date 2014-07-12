@@ -21,4 +21,9 @@ public class JSONUtils {
 			throw new RuntimeException("在将对象"+obj+"转换为JSON格式字符串的时候发生异常！");
 		}
 	}
+	
+	public  static  void main(String[] args){
+		org.apache.commons.beanutils.BeanUtils a=new org.apache.commons.beanutils.BeanUtils();
+		org.apache.commons.io.FileUtils b=new org.apache.commons.io.FileUtils();
+	}
 }

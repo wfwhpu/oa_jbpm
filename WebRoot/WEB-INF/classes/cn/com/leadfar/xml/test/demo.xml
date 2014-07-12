@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<people> 
+  <person personid="e01" enable="true"> 
+    <name>张三</name> 
+    <tel>44565654566</tel> 
+    <email>zangsan@sina.com</email> 
+  </person> 
+    
+  <person personid="e02" enable="false"> 
+    <name>李四</name> 
+    <tel>324243444</tel> 
+    <email>lisi@sina.com</email> 
+  </person> 
+    
+  <person personid="e03" enable="true"> 
+    <name>王五</name> 
+    <tel>3453553</tel> 
+    <email>wangwu@188.net</email> 
+  </person> 
+    
+</people>

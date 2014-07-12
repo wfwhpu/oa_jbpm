@@ -1,0 +1,29 @@
+
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>yui学习</title>
+		<style type="text/css">
+</style>
+		<script type="text/javascript" src="widgets/yui/yui-min.js"></script>
+		<script type="text/javascript">
+	YUI().use('autocomplete', 'autocomplete-filters', 'autocomplete-highlighters', function (Y) {
+  var states = ['A','AB','CD','EF'];
+  Y.one('#ac-input').plug(Y.Plugin.AutoComplete, {
+    resultFilters    : 'phraseMatch',
+    resultHighlighter: 'phraseMatch',
+    source           : states
+  });
+});
+</script>
+	</head>
+	<body>
+		<div id="demo" class="yui3-skin-sam">
+			<label for="ac-input">
+				输入内容:
+			</label>
+			<br>
+			<input id="ac-input" type="text">
+		</div>
+	</body>
+</html>

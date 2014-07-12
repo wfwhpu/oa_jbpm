@@ -51,6 +51,7 @@ public class BaseServiceImp implements BaseService {
 	public PagerVO findPaginated(String query, Object param) {
 		// TODO Auto-generated method stub
 		return findPaginated(query,new Object[]{param});
+		
 	}
 
 	@Override
